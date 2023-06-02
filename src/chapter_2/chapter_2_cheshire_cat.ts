@@ -20,11 +20,36 @@ export function meetTheCheshireCat(): void {
 	clear(true);
 
 	const theCat = new CheshireCat();
-
-	// 👉 FIXME ❌
-	// 		Add some code here which allows you to progress *without* altering any other code in this file
-	// 👉 END FIXME ❌
-
+      
+	const expressions = [
+		'☹ Frown ☹',
+		'🙂 Smile 🙂',
+		'😁 Grin 😁',
+		'😶 Blank Face 😶',
+		'😡 Angry Face 😡',
+	] as const;
+	type FacialExpression = typeof expressions[number];
+	const expression = new CheshireCat();
+	switch(theCat.expression) {
+		case '☹ Frown ☹':
+		  // Handle frown expression
+		  break;
+		case '🙂 Smile 🙂':
+		  // Handle smile expression
+		  break;
+		case '😁 Grin 😁':
+		  // Handle grin expression
+		  break;
+		case '😶 Blank Face 😶':
+		  // Handle blank face expression
+		  break;
+		case '😡 Angry Face 😡':
+		  // Handle angry face expression
+		  break;
+		default:
+		  // Handle other or unknown expressions
+		  break;
+	  }
 	print(
 		`You can see ${theCat.name}. A wide ${theCat.expression} is hovering in the air.`
 	);
