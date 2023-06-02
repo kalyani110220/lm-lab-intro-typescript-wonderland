@@ -22,9 +22,7 @@ export function meetTheQueen(): void {
 		'The White Rabbit',
 		'The Cheshire Cat',
 	]);
-	function getWitnesses(witnessNames: string[]) : Witness[] {
-		return witnessNames.map(n => { return { name: n, giveEvidence: () => 'Not Guilty',}});
-	}
+	
 	if (!witnesses || witnesses.length === 0) {
 		print(`No witnesses have come forward to defend you.`);
 		guilty = true;
@@ -50,6 +48,10 @@ export function meetTheQueen(): void {
 		print('Time to wake up...');
 		return askQuestion('Press ENTER to continue! ', wakeUp);
 	}
+}
+
+function getWitnesses(witnessNames: string[]) : Witness[] {
+	return witnessNames.map(n => { return { name: n, giveEvidence: () => 'Not Guilty',}});
 }
 
 
