@@ -1,8 +1,11 @@
+import { endAdventure, haveAdventures } from '../..';
+import { askQuestion, clear, print } from '../ui/console';
+
 function alicesAdventure(): void {
-    console.log("Alice wakes  from dream.");
+    console.log("Alice starts her adventure.");
     console.log("Alice and her mom walk to the grocery store.");
   
-    // Implement  adventure logic here
+    // Implement your adventure logic here
     const groceryList: string[] = ["fruits", "vegetables"];
   
     console.log("Alice and her mom arrive at the grocery store.");
